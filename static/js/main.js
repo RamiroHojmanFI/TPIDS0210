@@ -1,6 +1,16 @@
 const menuBtn = document.getElementById("menu-btn");
 const navLinks = document.getElementById("nav-links");
 const menuBtnIcon = menuBtn.querySelector("i");
+const btnpdf = document.querySelectorAll(".btn_pdf");
+
+btnpdf.forEach(btnpdf => {
+  btnpdf.addEventListener("mouseover", () => {
+    btnpdf.style.color= "#2476da";
+  });
+  btnpdf.addEventListener("mouseout", () => {
+    btnpdf.style.color= "#2887ff";
+  });
+});
 
 menuBtn.addEventListener("click", (e)=>{
     navLinks.classList.toggle("open");

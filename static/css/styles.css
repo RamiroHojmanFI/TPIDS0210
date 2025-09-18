@@ -38,7 +38,26 @@
   color: var(--text-dark);
   text-align: center;
 }
-
+.form-group{
+  margin-top: 2rem;
+}
+.form_reg{
+  width: 15rem;
+  height: 2rem;
+  border-color: #b8b8b8;
+  border-radius: 0.3rem;
+  border-width: 0.03rem;
+}
+#modalidad{
+  background-color: white;
+  padding-right: 3rem;
+}
+#opcion{
+   padding-right: 3rem;
+}
+#formopciones{
+  margin-bottom: 2rem;
+}
 .section__description {
   max-width: 600px;
   margin-inline: auto;
@@ -69,14 +88,8 @@
   transition: 0.3s;
   cursor: pointer;
 }
-.btn_pdf:hover {
-  color: #2476da;
-  
-}
 
-.btn:hover {
-  background-color: var(--primary-color-dark);
-}
+
 
 .logo {
   font-size: 1.75rem;
@@ -232,10 +245,7 @@ header::before{
   background-color: var(--white);
   border-radius:100% ;
 }
-.header__btns a:hover{
-color: var(--white);
-background-color: var(--primary-color);
-}
+
 
 .destination__container :is(.section__header, .section__description){
   text-align: left;
