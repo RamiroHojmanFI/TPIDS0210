@@ -55,6 +55,7 @@
 #opcion{
    padding-right: 3rem;
 }
+
 #formopciones{
   margin-bottom: 2rem;
 }
@@ -320,6 +321,7 @@ columns: var(--text-dark);
   display: flex;
   gap: 1rem;
   flex-wrap: wrap; 
+  justify-content: center;
 }
 
 .journey__card {
@@ -329,6 +331,8 @@ columns: var(--text-dark);
   overflow: hidden;
   flex: 1 1 250px;   
   max-width: 300px;  
+    margin-right: 2rem;
+
 }
 
 .journey__card__bg{

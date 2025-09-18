@@ -28,9 +28,9 @@ def home():
                 "modalidad_costo": {1: {"nombre": "Corta" ,"valor": "100"}, 
             2: {"nombre": "Larga" ,"valor": "200"}}, 
             3:{    
-                "Ausp1":"texto",
-                "Ausp2":"texto2",
-                "Ausp3":"texto3"         
+                "Coca-Cola":"Gracias Coca-Cola por hidratar a todos nuestros corredores.",
+                "Disney":"Disfruta de esta carrera on stream sin pausas ni anuncios a traves de Disney Plus",
+                "SAME":"Sabemos que pueden haber accidentes, y estamos cubiertos. SAME, Cuidame"         
             } }}
     return render_template('index.html', mensaje='lolazo', envio =info_evento) #esto es lo del jinja !!
 @app.route("/contacto")
