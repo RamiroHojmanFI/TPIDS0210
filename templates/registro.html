@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+      {% block body %}
+
+    <header>
+      <div class="header__container">
+        <div class="header__content">
+            <h1 class="section__header">Registrate</h1>
+            <p class="section__description">
+                Completa el formulario para participar de la carrera.
+            </p>
+            <form class="form-container" action="{{ url_for('registro')}}" method="post">
+                <div class="form-group">
+                    <label class="section__description" for="dni">DNI:</label>
+                    <input class="form_reg" type="text" id="dni" name="dni" required>
+                </div>
+                <div class="form-group">
+                    <label class="section__description" for="nombre">Nombre:</label>
+                    <input class="form_reg" type="text" id="nombre" name="nombre" required>
+                </div>
+                <div class="form-group">
+                    <label class="section__description" for="apellido">Apellido:</label>
+                    <input class="form_reg" type="text" id="apellido" name="apellido" required>
+                </div>
+                <div class="form-group">
+                    <label class="section__description" for="email">Email:</label>
+                    <input class="form_reg" type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label class="section__description" for="num_celular">Numero de celular:</label>
+                    <input class="form_reg" type="text" id="num_celular" name="num_celular" required>
+                </div>
+                <div class="form-group" id="formopciones">
+                    <label  class="section__description" for="modalidad">Modalidad:</label>
+                    <select class="form_reg" id="modalidad" name="modalidad" required>
+                        <option id="opcion" value="corta">30km (Corta)</option>
+                        <option id="opcion"value="larga">80km (Larga)</option>
+                    </select>
+                </div>
+                <div class="header__btns">
+                    <button type="submit" class="btn">Enviar Registro</button>
+                </div>
+            </form>
+        </div>
+        <div class="header__image">
+            <img src="{{url_for('static', filename='/images/escudo.jpg')}}" alt="header" />
+        </div>
+      </div>
+    </header>
+
+    
+</body>
+{% endblock %}

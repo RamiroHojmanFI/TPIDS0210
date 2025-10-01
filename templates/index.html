@@ -1,0 +1,119 @@
+{% extends "base.html" %}
+
+      {% block body %}
+
+    <header id="nosotros">
+      <div class="header__container">
+        <div class="header__content">
+          <p>{{ envio.1.organizador }}</p>
+          <h1>{{ envio.1.slogan }}</h1>
+          <div class="header__btns">
+            <a href="{{ url_for('registro') }}">
+            <button class="btn">Registrate</button>
+            </a>
+          </div>
+        </div>
+        <div class="header__image">
+          <img id="sede"src="{{url_for('static', filename='/images/sede.jpeg')}}" alt="header" />
+        </div>
+      </div>
+    </header>
+
+    <section class="section__container destination__container" id="puntos">
+      <h2 class="section__header">Puntos de interes.</h2>
+      <p class="section__description">
+        Tandil, una ciudad para almas inquietas.
+      </p>
+      <div class="destination__grid">
+        <div class="destination__card">
+            
+         <img src="{{url_for('static', filename='/images/piedra.jpg')}}" alt="destination" />
+          <div class="destination__card__details">
+            <div>
+              <h4>Piedra movediza de Tandil.</h4>
+              <p>Tandil, Argentina</p>
+            </div>
+            <div class="destination__ratings">
+              <span><i class="ri-star-fill"></i></span>
+              4.7
+            </div>
+          </div>
+        </div>
+        <div class="destination__card">
+          <img src="{{url_for('static', filename='/images/dique.jpg')}}" alt="destination" />
+          <div class="destination__card__details">
+            <div>
+              <h4>Dique del fuerte.</h4>
+              <p>Tandil, Argentina</p>
+            </div>
+            <div class="destination__ratings">
+              <span><i class="ri-star-fill"></i></span>
+              4.8
+            </div>
+          </div>
+        </div>
+        <div class="destination__card">
+          <img src="{{url_for('static', filename='/images/hipodromo.jpeg')}}" alt="destination" />
+          <div class="destination__card__details">
+            <div>
+              <h4>Hipodromo de tandil.</h4>
+              <p>Tandil, Argentina</p>
+            </div>
+            <div class="destination__ratings">
+              <span><i class="ri-star-fill"></i></span>
+              4.5
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section__container journey__container" id="tour">
+    <h2 class="section__header">Nuestros Auspiciantes!</h2>
+    <p class="section__description">
+        Gracias por hacer esto posible.
+    </p>
+    <div class="journey__grid">
+     {% for sponsor_nombre, datos_patrocinador in envio.1.patrocinadores.items() %}
+        <div class="journey__card">
+            <img src="{{ url_for('static', filename=datos_patrocinador.logo_url) }}" alt="Logo de {{ sponsor_nombre }}">
+            <div class="journey__card__bg">
+                <span><i class="ri-bookmark-3-line"></i></span>
+                <h4>{{ sponsor_nombre }}</h4>
+            </div>
+            <div class="journey__card__content">
+                <span><i class="ri-bookmark-3-line"></i></span>
+                <p>
+                    {{ datos_patrocinador.mensaje }}
+                </p>
+            </div>
+        </div>
+     {% endfor %}
+    </div>
+    </section>
+
+    <section id ="recorridos"class="section__container journey__container">
+      <div class="section__header">
+        <h4 class="section__header">Nuestros recorridos</h4>
+        <div class="destination__card">
+        <h1 class="section__header" id="subtitulo">Corto</h3>
+          <div id="mapa1"class="mapa"></div>
+          <h1 class="section__header" id="subtitulo">Largo</h3>
+          <div id ="mapa2"class="mapa" ></div>
+          </div>
+      </div>
+    </section>
+
+    <h4 class="section__header" id="documentacion">Documentacion</h4>
+    <section class="section__container banner__container">
+      <div class="banner__card">
+        <a class="btn_pdf" id="pdf"href="static/documentos/deslinde_responsabilidad.pdf" download="bdeslinde_responsabilidad.pdf">Deslinde</a>      </div>
+      <div class="banner__card">
+        <a class="btn_pdf" id="pdf"href="static/documentos/lista_elementos.pdf" download="lista_elementos.pdf">Kit</a>      </div>
+      <div class="banner__card">
+        <a class="btn_pdf" id="pdf"href="static/documentos/reglamento_circuito.pdf" download="reglamento_circuito.pdf">Reglamento</a> <!-- Hay que hacer los pdf pero esto ya descargs-->
+      </div>
+    </section>
+    
+  </body>
+{% endblock %}
