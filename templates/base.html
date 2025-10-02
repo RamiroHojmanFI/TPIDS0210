@@ -27,19 +27,19 @@
     <nav>
       <div class="nav__header">
         <div class="nav__logo">
-          <a href="#" class="logo">{{envio.1.nombre}}</a>
+          <a href="{{ url_for('home') }}" class="logo">{{envio.1.nombre}}</a>
         </div>
         <div class="nav__menu__btn" id="menu-btn">
           <i class="ri-menu-line"></i>
         </div>
       </div>
       <ul class="nav__links" id="nav-links">
-        <li><a href="#nosotros">Nosotros</a></li>
-        <li><a href="#puntos">Puntos de interes</a></li>
-        <li><a href="#tour">Auspiciantes</a></li>
-        <li><a href="#recorridos">Recorridos</a></li>
-        <li><a href="#documentacion">Documentacion</a></li>
-        <li><a href="#contact">Contacto</a></li>
+        <li><a href="{{ url_for('home') }}#nosotros">Nosotros</a></li>
+        <li><a href="{{ url_for('home') }}#puntos">Puntos de interes</a></li>
+        <li><a href="{{ url_for('home') }}#tour">Auspiciantes</a></li>
+        <li><a href="{{ url_for('home') }}#recorridos">Recorridos</a></li>
+        <li><a href="{{ url_for('home') }}#documentacion">Documentacion</a></li>
+        <li><a href="{{ url_for('home') }}#contact">Contacto</a></li>
         <li><a href="#">BOOK TRIP</a></li>
       </ul>
     
